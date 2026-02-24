@@ -1,0 +1,90 @@
+/* 1. Layout Principale */
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    /* Struttura fissa: sinistra per canvas, destra 300px per i comandi */
+    grid-template-columns: auto 300px; 
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "disegno titolo"
+        "disegno slider";
+    column-gap: 60px;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background-color: #0f172a; /* Sfondo Dark */
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+/* 2. Il Canvas (La Curva) */
+canvas {
+    grid-area: disegno;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+/* 3. Il Titolo - Una riga, centrato e spostato verso la curva */
+h1 {
+    grid-area: titolo;
+    justify-self: center;
+    align-self: center;
+    position: relative; 
+    top: -110px;  /* Altezza fissa */
+    left: -50px;  /* Avvicinamento orizzontale al canvas */
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #f8fafc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%; /* Occupa l'intera larghezza della colonna comandi */
+}
+
+/* 4. Lo Slider - Stessa larghezza e allineamento del titolo */
+input[type="range"] {
+    grid-area: slider;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    top: -30px;   /* Altezza fissa (rimane dov'è) */
+    left: -50px;  /* Stesso allineamento orizzontale del titolo */
+    width: 100%;  /* Stessa dimensione del titolo */
+    -webkit-appearance: none;
+    height: 6px;
+    background: #334155;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* --- Stile del Cursore (Thumb) --- */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    background: #38bdf8;
+    border: 3px solid #0f172a;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+    transition: transform 0.2s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Supporto Firefox */
+input[type=range]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #38bdf8;
+    border: 3px solid #0f172a;
+    border-radius: 50%;
+    cursor: pointer;
+}

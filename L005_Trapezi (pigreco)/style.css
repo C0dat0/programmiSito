@@ -1,0 +1,56 @@
+/* Reset e impostazioni base del corpo pagina */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0f172a; /* Sfondo scuro professionale */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8fafc;
+}
+
+/* Titolo e contenitore dei testi */
+h1 {
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.info {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+#piValue {
+    color: #38bdf8; /* Azzurro coordinato ai trapezi */
+    font-weight: bold;
+    font-family: monospace;
+}
+
+/* Il Canvas: il rettangolo bianco al centro */
+canvas {
+    background-color: #ffffff; /* Sfondo bianco pulito */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    /* Mantiene le proporzioni ma non esce dallo schermo */
+    max-width: 90vw;
+    max-height: 70vh;
+}
+
+/* Lo slider */
+#slider {
+    width: 350px;
+    margin-top: 30px;
+    cursor: pointer;
+    accent-color: #38bdf8; /* Colore del cursore coordinato */
+}
+
+/* Etichetta per lo slider */
+label {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}

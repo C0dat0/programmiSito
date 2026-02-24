@@ -1,0 +1,99 @@
+/* 1. Layout Principale */
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    /* Colonna sinistra per il disegno, colonna destra (300px) per i comandi */
+    grid-template-columns: auto 300px; 
+    /* Tre righe per Titolo, Slider Livello, Slider Gradi */
+    grid-template-rows: 1fr 1fr 1fr; 
+    column-gap: 60px;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background-color: #0f172a; /* Blu notte profondo */
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+/* 2. Il Canvas (Il contenitore dell'albero) */
+canvas {
+    grid-column: 1;
+    grid-row: 1 / span 3; /* Occupa tutta l'altezza a sinistra */
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    align-self: center;
+}
+
+/* 3. Il Titolo - Alzato per dare più respiro */
+h1 {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    align-self: end;      
+    position: relative; 
+    top: -130px;          /* Modifica: Titolo più in alto */
+    left: -50px;          /* Avvicinamento orizzontale al canvas */
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    color: #f8fafc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    white-space: nowrap;  
+    width: 100%;
+}
+
+/* 4. Gli Slider (Livello e Gradi) */
+input[type="range"] {
+    grid-column: 2;
+    justify-self: center;
+    position: relative;
+    left: -50px;          /* Allineamento con il titolo */
+    width: 100%;          /* Stessa larghezza del titolo */
+    -webkit-appearance: none;
+    height: 6px;
+    background: #334155;  
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Assegnazione alle righe per i tuoi ID JavaScript */
+#range { 
+    grid-row: 2; 
+    align-self: center; 
+}
+
+#grade { 
+    grid-row: 3; 
+    align-self: start; 
+    margin-top: -20px;    /* Compatta lo spazio tra i due slider */
+}
+
+/* --- Estetica del Cursore (Thumb) --- */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    background: #38bdf8; /* Azzurro brillante */
+    border: 3px solid #0f172a;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+    transition: transform 0.2s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Supporto Firefox */
+input[type=range]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #38bdf8;
+    border: 3px solid #0f172a;
+    border-radius: 50%;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Torre di Hanoi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Torre di Hanoi</h1>
+
+    <!-- Contenitore principale verticale -->
+    <div id="contenitore">
+
+        <!-- Riquadro opzioni (in alto) -->
+        <div id="riquadroOpzioni">
+            <h2>Modalità di gioco</h2>
+
+            <!-- Pulsanti modalità -->
+            <div class="pulsantiModalita">
+                <button onclick="selezionaModalita('simulazione')">Simulazione Automatica</button>
+                <button onclick="selezionaModalita('manuale')">Gioca Manuale</button>
+            </div>
+
+            <!-- Input numero dischi -->
+            <div class="controls">
+                <label>Numero dischi (1-6): </label>
+                <input type="number" id="numDischi" min="1" max="6" value="3">
+            </div>
+
+            <!-- Pulsante avvia -->
+            <div class="pulsantiAzioni">
+                <button onclick="avvia()">Avvia Gioco</button>
+            </div>
+        </div>
+
+        <!-- Riquadro gioco (in basso) -->
+        <div id="riquadroGioco">
+            <p>Mosse: <span id="contatore">0</span></p>
+            <p id="messaggio"></p>
+            <canvas id="canvas" width="900" height="500"></canvas>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

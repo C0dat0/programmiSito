@@ -1,0 +1,130 @@
+/* Reset base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corpo pagina */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #0a0a23;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Titolo principale */
+h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #ff8c00, #ff2e63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Contenitore verticale */
+#contenitore {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1200px;
+    gap: 30px;
+}
+
+/* Riquadro opzioni (alto) */
+#riquadroOpzioni {
+    background: #1f1f3a;
+    border-radius: 20px;
+    padding: 25px 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#riquadroOpzioni h2 {
+    font-size: 28px;
+    color: #ffa500;
+}
+
+/* Gruppi pulsanti */
+.pulsantiModalita,
+.pulsantiAzioni {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Pulsanti generali */
+#riquadroOpzioni button {
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+#riquadroOpzioni button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* Input numero dischi */
+#riquadroOpzioni input {
+    width: 60px;
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    background: #2c2c5c;
+    color: #fff;
+}
+
+/* Riquadro gioco (basso) */
+#riquadroGioco {
+    background: #1a1a2e;
+    border-radius: 20px;
+    padding: 25px 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Canvas */
+#riquadroGioco canvas {
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #0a0a23, #1f1f3a);
+    border: 4px solid #ffa500;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.7);
+}
+
+/* Contatore mosse e messaggio vittoria */
+#riquadroGioco p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#messaggio {
+    color: #ffb347;
+    font-size: 24px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}

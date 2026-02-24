@@ -1,0 +1,38 @@
+/* 1. Layout Principale */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0f172a; 
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+/* 2. Il Titolo - Sopra il rettangolo */
+h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #f8fafc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* 3. Il Canvas (ID: Successione) */
+#Successione {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    
+    /* Queste righe impediscono all'immagine di allungarsi */
+    display: block;
+    max-width: 90vw;   /* Non supera il 90% della larghezza schermo */
+    max-height: 75vh;  /* Non supera il 75% dell'altezza schermo */
+    height: auto;      /* Mantiene le proporzioni originali */
+    width: auto;       /* Mantiene le proporzioni originali */
+}
