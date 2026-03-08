@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torre di Hanoi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Torre di Hanoi</h1>
+
+    <label for="numDischi">Numero dischi (1-6)</label>
+    <input type="number" id="numDischi" min="1" max="6" value="3">
+    <button onclick="avvia()">Avvia</button>
+
+    <p>Mosse: <span id="contatore">0</span></p>
+    <p id="messaggio"></p>
+
+    <canvas id="canvas" width="900" height="500"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>

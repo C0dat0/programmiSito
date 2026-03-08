@@ -1,64 +1,75 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Sito personale</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Sito personale</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
 
-    <section class="section hero">
-        <div class="content">
-            <h1>Ciao, sono Codato Gianluca</h1>
-            <p>Studente di informatica appassionato di programmazione e sviluppo software.</p>
-            <div class="arrow">↓</div>
-        </div>
-    </section>
+<section class="section hero">
+<div class="content">
+<h1>Ciao, sono Codato Gianluca</h1>
+<p>Studente di informatica appassionato di programmazione e sviluppo software.</p>
+<div class="arrow">↓</div>
+</div>
+</section>
 
-    <section class="section projects">
-        <div class="content">
-            <h2>I miei programmi</h2>
+<section class="section projects">
 
-            <div class="cards">
+<div class="content">
 
-                <div class="card hidden">
-                    <h3>Von Koch</h3>
-                    <p></p>
-                    <a href="progetti/L001_EsercizioVonKoch/index.html" target="_blank">Apri Demo</a>
-                </div>
+<h2>I miei programmi</h2>
 
-                <div class="card hidden">
-                    <h3>Binary Tree</h3>
-                    <p></p>
-                    <a href="progetti/L002_BinaryTree/index.html" target="_blank">Apri Demo</a>
-                </div>
+<div class="cards">
 
-                <div class="card hidden">
-                    <h3>Successioni Autosomiglianti</h3>
-                    <p></p>
-                    <a href="progetti/L003_SuccessioniAutosomiglianti/index.html" target="_blank">Apri Demo</a>
-                </div>
+<div class="card hidden">
+<h3>Von Koch</h3>
+<a class="demoLink" href="progetti/L001_EsercizioVonKoch/index.html">Apri Demo</a>
+</div>
 
-                <div class="card hidden">
-                    <h3>Monte Carlo (π)</h3>
-                    <p></p>
-                    <a href="progetti/L004_MonteCarlo (pigreco)/index.html" target="_blank">Apri Demo</a>
-                </div>
+<div class="card hidden">
+<h3>Binary Tree</h3>
+<a class="demoLink" href="progetti/L002_BinaryTree/index.html">Apri Demo</a>
+</div>
 
-                <div class="card hidden">
-                    <h3>Trapezi (π)</h3>
-                    <p></p>
-                    <a href="progetti/L005_Trapezi (pigreco)/index.html" target="_blank">Apri Demo</a>
-                </div>
+<div class="card hidden">
+<h3>Successioni Autosomiglianti</h3>
+<a class="demoLink" href="progetti/L003_SuccessioniAutosomiglianti/index.html">Apri Demo</a>
+</div>
 
-            </div>
-        </div>
-    </section>
+<div class="card hidden">
+<h3>Monte Carlo (π)</h3>
+<a class="demoLink" href="progetti/L004_MonteCarlo_pigreco/index.html">Apri Demo</a>
+</div>
+
+<div class="card hidden">
+<h3>Trapezi (π)</h3>
+<a class="demoLink" href="progetti/L005_Trapezi_pigreco/index.html">Apri Demo</a>
+</div>
+
+<div class="card hidden">
+<h3>Torre di Hanoi</h3>
+<a class="demoLink" href="progetti/P002_TorreHanoi/index.html">Apri Demo</a>
+</div>
 
 </div>
 
+</div>
+
+</section>
+
+</div>
+
+<!-- VIEWER DEMO -->
+<div id="demoViewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:black; z-index:9999;">
+<iframe id="demoFrame" style="width:100%; height:100%; border:none;"></iframe>
+</div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
