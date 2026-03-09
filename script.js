@@ -15,7 +15,6 @@ function revealOnScroll() {
 container.addEventListener("scroll", revealOnScroll);
 
 
-/* DEMO VIEWER */
 const viewer = document.getElementById("demoViewer");
 const frame = document.getElementById("demoFrame");
 
@@ -26,7 +25,6 @@ document.querySelectorAll(".demoLink").forEach(link => {
         frame.src = path;
         viewer.style.display = "block";
 
-        // salva stato nella cronologia
         history.pushState({demo:true}, "", "#demo");
     });
 });
@@ -37,7 +35,6 @@ function closeDemo(){
     frame.src = "";
 }
 
-/* freccia indietro del browser */
 window.addEventListener("popstate", function(){
     if(viewer.style.display === "block"){
         closeDemo();
