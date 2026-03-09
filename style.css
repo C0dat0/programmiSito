@@ -1,4 +1,3 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +9,12 @@ body {
     overflow: hidden;
 }
 
-/* CONTAINER SCROLL SNAP */
 .container {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 
-/* SEZIONI */
 .section {
     height: 100vh;
     scroll-snap-align: start;
@@ -27,7 +24,6 @@ body {
     text-align: center;
 }
 
-/* HERO */
 .hero {
     background: linear-gradient(135deg, #2563eb, #1e3a8a);
     color: white;
@@ -55,7 +51,6 @@ body {
     animation: bounce 1.5s infinite;
 }
 
-/* PROGETTI */
 .projects {
     background: #f8fafc;
     color: #1f2937;
@@ -103,7 +98,6 @@ body {
     font-weight: 500;
 }
 
-/* ANIMAZIONE */
 .hidden {
     opacity: 0;
     transform: translateY(40px);
@@ -115,7 +109,6 @@ body {
     transform: translateY(0);
 }
 
-/* FRECCIA ANIMAZIONE */
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(8px); }
